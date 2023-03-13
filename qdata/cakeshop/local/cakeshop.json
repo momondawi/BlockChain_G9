@@ -1,0 +1,17 @@
+[
+  {
+    "name": "node1",
+    "rpcUrl": "http://127.0.0.1:22000",
+    "transactionManagerUrl": "http://127.0.0.1:9081"
+  },
+  {
+    "name": "node2",
+    "rpcUrl": "http://127.0.0.1:22001",
+    "transactionManagerUrl": "http://127.0.0.1:9082"
+  },
+  {
+    "name": "node3",
+    "rpcUrl": "http://127.0.0.1:22002",
+    "transactionManagerUrl": "http://127.0.0.1:9083"
+  }
+]

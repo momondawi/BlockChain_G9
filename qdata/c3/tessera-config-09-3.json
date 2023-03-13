@@ -1,0 +1,75 @@
+{
+  "useWhiteList": false,
+  "jdbc": {
+    "username": "sa",
+    "password": "",
+    "url": "jdbc:h2:/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/db3;MODE=Oracle;TRACE_LEVEL_SYSTEM_OUT=0",
+    "autoCreateTables": true
+  },
+  "serverConfigs": [
+    {
+      "app": "ThirdParty",
+      "serverAddress": "http://127.0.0.1:9083",
+      "cors": {
+        "allowedMethods": [
+          "GET",
+          "OPTIONS"
+        ],
+        "allowedOrigins": [
+          "*"
+        ]
+      },
+      "communicationType": "REST"
+    },
+    {
+      "app": "Q2T",
+      "serverAddress": "unix:/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/tm.ipc",
+      "communicationType": "REST"
+    },
+    {
+      "app": "P2P",
+      "serverAddress": "http://127.0.0.1:9003",
+      "sslConfig": {
+        "tls": "OFF",
+        "generateKeyStoreIfNotExisted": true,
+        "serverKeyStore": "/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/server3-keystore",
+        "serverKeyStorePassword": "quorum",
+        "serverTrustStore": "/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/server-truststore",
+        "serverTrustStorePassword": "quorum",
+        "serverTrustMode": "TOFU",
+        "knownClientsFile": "/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/knownClients",
+        "clientKeyStore": "/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/client3-keystore",
+        "clientKeyStorePassword": "quorum",
+        "clientTrustStore": "/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/client-truststore",
+        "clientTrustStorePassword": "quorum",
+        "clientTrustMode": "TOFU",
+        "knownServersFile": "/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/knownServers"
+      },
+      "communicationType": "REST"
+    }
+  ],
+  "peer": [
+    {
+      "url": "http://127.0.0.1:9001"
+    },
+    {
+      "url": "http://127.0.0.1:9002"
+    },
+    {
+      "url": "http://127.0.0.1:9003"
+    }
+  ],
+  "keys": {
+    "passwords": [],
+    "keyData": [
+      {
+        "privateKeyPath": "/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/tm.key",
+        "publicKeyPath": "/Users/momo/Documents/COURS/M2/BlockChain/quorum/network/3-nodes-quickstart/qdata/c3/tm.pub"
+      }
+    ]
+  },
+  "alwaysSendTo": [],
+  "features": {
+    "enablePrivacyEnhancements": true
+  }
+}
